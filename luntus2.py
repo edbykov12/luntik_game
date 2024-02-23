@@ -22,19 +22,15 @@ class MainWindow(QMainWindow):
         y = QAction("Магазин", self)
         yy = QAction("Инвентарь", self)
         yyy = QAction("Уровни", self)
-        yyyy = QAction("Сохранить игру", self)
-        self.yyyyy = QAction("Загрузить игру", self)
         file_menu.addAction(y)
         file_menu.addAction(yy)
         file_menu.addAction(yyy)
-        file_menu.addAction(yyyy)
-        file_menu.addAction(self.yyyyy)
-        self.yyyyy.triggered.connect(self.z)
+        yyy.triggered.connect(self.z)
 
 
     def z(self):
-        import luntus
-            
+        import mem_luntic
+        
 
 window = MainWindow()
 window.setWindowTitle("Luntik meme adventures")
