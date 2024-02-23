@@ -20,7 +20,7 @@ screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Luntik meme adventures")
 gameScreen.fill((255,255,255))
 pygame.display.flip()
-#музычка
+#музычка1
 music1=pygame.mixer.music.load("PXLUS - PAIN BRAZIL.mp3")
 #music2=pygame.mixer.music.load("Downloads\Telegram Desktop\Неизвестный_исполнитель_Тема_из_пиратов_Карибского_моря_www_hotplayer.mp3")
 pygame.mixer.music.play()
