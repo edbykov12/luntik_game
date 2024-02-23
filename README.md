@@ -1,1 +1,2 @@
-# luntik_game
+# Эта игра - боевик "Luntic meme adventures".
+# НАСЛАЖДАЙТЕСЬ!!!!
