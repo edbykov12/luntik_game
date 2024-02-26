@@ -3,10 +3,14 @@ import time
 import PyQt6
 import pygame
 import sys
-lvlnmb=5
+f = open('checkpoint.txt', 'r')
+e = f.read()
+f.close()
+pygame.init()
+lvlnmb=e
 #Время перезарядки у всех персов одинаковое
 atack_time_norm=0.1
-if lvlnmb==5:
+if lvlnmb==e:
     #Характеристики врага(в данном случае босс=Шнюк)
     health_agro=1000
     atack_agro=50
@@ -58,8 +62,19 @@ pygame.display.set_caption("Luntik meme adventures")
 gameScreen.fill((255,255,0))
 pygame.display.flip()
 #музычка
-music1=pygame.mixer.music.load("C:\Users\Макс\python\luntik_game\Пираты Карибского моря.mp3")
+music1=pygame.mixer.music.load("Пираты Карибского моря.mp3")
 pygame.mixer.music.play()
+#Цикл уровня
+while 1:
+    
+    for i in pygame.event.get():
+        if i.type == pygame.QUIT:
+            print(health_agro)
+            sys.exit()
+        elif i.type==pygame.KEYDOWN:
+            if i.key== pygame.K_w:
+                health_agro-=atack_norm
+        
 
 
 

@@ -32,7 +32,7 @@ while 1:
             sys.exit()
         if i.type == pygame.MOUSEBUTTONDOWN:
             if i.button==1:
-               music2=pygame.mixer.music.load("Неизвестный_исполнитель_Тема_из_пиратов_Карибского_моря_www_hotplayer.mp3")
+               music2=pygame.mixer.music.load("Пираты Карибского моря.mp3")
                pygame.mixer.music.play()
         if i.type == pygame.MOUSEBUTTONDOWN:
             if i.button==3:
