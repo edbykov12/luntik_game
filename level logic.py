@@ -1,5 +1,8 @@
+import random
 import time
+import PyQt6
 import pygame
+import sys
 lvlnmb=5
 #Время перезарядки у всех персов одинаковое
 atack_time_norm=0.1
@@ -9,6 +12,9 @@ if lvlnmb==5:
     atack_agro=50
     atcack_time_agro=0.3
 #Здесь должно быть окно выбора перса
+#Пока выбор персонажа будет просто переменная чтобы не выдавыло ошибок
+sk_charachter='Дарт Лунтус'
+charachter='Лунтик'
 if charachter=='Лунтик' and sk_charachter=='Дарт Лунтус':
     health_norm=5000
     shield_norm=100
@@ -35,8 +41,25 @@ if charachter=='Пчела мен' and sk_charachter=='Антивирус Пче
     super_norm=75
     super_time_norm=15.0
 #Цикл уровня
-while ():
-    
+f = open('checkpoint.txt', 'r')
+e = f.read()
+f.close()
+pygame.init()
+gameScreen = pygame.display.set_mode((400, 300))
+# Модуль os - позиция окна
+import os
+x = 100
+y = 100
+os.environ['Sp_VIDEO_WINDOW_POS'] = "%d,%d" % (x,y)
+# Параметры окна
+size = [500, 500]
+screen = pygame.display.set_mode(size)
+pygame.display.set_caption("Luntik meme adventures")
+gameScreen.fill((255,255,0))
+pygame.display.flip()
+#музычка
+music1=pygame.mixer.music.load("C:\Users\Макс\python\luntik_game\Пираты Карибского моря.mp3")
+pygame.mixer.music.play()
 
 
 
