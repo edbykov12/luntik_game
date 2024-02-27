@@ -81,12 +81,13 @@ while 1:
             pygame.time.delay(600)
             sys.exit()
         if health_norm<=0:
+            music4=pygame.mixer.music.load("ДИМОООН-ДИМОООН_(muzmo.su).mp3")
+            pygame.mixer.music.play()
             f2 = pygame.font.Font(None, 36)
             text2 = f2.render('К сожалению вы проиграли...', 1, (180, 0, 0))
             gameScreen.blit(text2, (10, 50))
-            wait(0.2)
+            wait(6000)
             sys.exit()
-            break
         if i.type == pygame.QUIT:
             sys.exit()
         elif i.type==pygame.KEYDOWN:
