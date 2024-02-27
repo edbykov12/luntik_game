@@ -15,7 +15,7 @@ x = 100
 y = 100
 os.environ['Sp_VIDEO_WINDOW_POS'] = "%d,%d" % (x,y)
 # Параметры окна
-size = [500, 500]
+size = [700, 700]
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Luntik meme adventures")
 gameScreen.fill((255,255,255))
@@ -24,7 +24,8 @@ pygame.display.flip()
 music1=pygame.mixer.music.load("PXLUS - PAIN BRAZIL.mp3")
 pygame.mixer.music.play()
 #Иконка
-img=pygame.image.load("мия.png")
+img=pygame.image.load("мия.jpg")
+pygame.display.set_icon(img)
 #Цикл Игры
 while 1:
     for i in pygame.event.get():
