@@ -23,7 +23,9 @@ pygame.display.flip()
 #музычка
 music1=pygame.mixer.music.load("PXLUS - PAIN BRAZIL.mp3")
 pygame.mixer.music.play()
-# Цикл игры
+#Иконка
+img=pygame.image.load("мия.png")
+#Цикл Игры
 while 1:
     for i in pygame.event.get():
         pygame.mouse.set_visible
