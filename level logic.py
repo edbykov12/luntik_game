@@ -66,15 +66,31 @@ music1=pygame.mixer.music.load("Пираты Карибского моря.mp3")
 pygame.mixer.music.play()
 #Цикл уровня
 while 1:
-    
     for i in pygame.event.get():
+        f1 = pygame.font.Font(None, 30)
+        text1 = f1.render(str(health_agro), 1, (0, 0, 0))
+        gameScreen.blit(text1, (5, 50))
+        pygame.display.update()
+        if health_agro<=0:
+            f1 = pygame.font.Font(None, 36)
+            text1 = f1.render('Поздравляю! Победа!', 1, (180, 0, 0))
+            gameScreen.blit(text1, (10, 50))
+            pygame.display.update()
+            pygame.time.delay(600)
+            sys.exit()
+        if health_norm<=0:
+            f2 = pygame.font.Font(None, 36)
+            text2 = f2.render('К сожалению вы проиграли...', 1, (180, 0, 0))
+            gameScreen.blit(text2, (10, 50))
+            wait(0.2)
+            sys.exit()
+            break
         if i.type == pygame.QUIT:
-            print(health_agro)
             sys.exit()
         elif i.type==pygame.KEYDOWN:
             if i.key== pygame.K_w:
-                health_agro-=atack_norm
-        
+                health_agro=health_agro-atack_norm
+    
 
 
 
