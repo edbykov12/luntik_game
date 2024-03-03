@@ -1,2 +1,2 @@
-f = open("levels.txt","r")
-print(type(int("".join(f.readline()))))
+import math
+print(math.gcd(79, 99))

@@ -43,5 +43,5 @@ while 1:
                pygame.mixer.music.play()
         if i.type ==  pygame.MOUSEBUTTONDOWN:
             if i.button==2:
-                music3=pygame.mixer.music.load('Ravilz Toothless Dancing.mp3')  
+                music3=pygame.mixer.music.load("Ravilz Toothless Dancing.mp3")  
                 pygame.mixer.music.play()
