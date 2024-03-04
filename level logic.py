@@ -13,7 +13,7 @@ sk_charachter='Дарт Лунтус'
 charachter='Лунтик'
 if charachter=='Лунтик' and sk_charachter=='Дарт Лунтус':
     health_norm=10
-    shield_norm=100
+    shield_norm=5
     atack_norm=300
     super_norm=1000
     super_time_norm=20.0
@@ -95,7 +95,14 @@ while 1:
                 health_agro-=atack_norm
         if i.type==pygame.KEYDOWN:
             if i.key== pygame.K_s:
-                health_norm=health_norm-atack_agro
+                music4=pygame.mixer.music.load("ДИМОООН-ДИМОООН_(muzmo.su).mp3")
+                pygame.mixer.music.play()
+                f2 = pygame.font.Font(None, 36)
+                text2 = f2.render('К сожалению вы проиграли...', 1, (180, 0, 0))
+                gameScreen.blit(text2, (10, 50))
+                pygame.display.update()
+                pygame.time.delay(7000)
+                sys.exit()
         if health_norm<=0:
             music4=pygame.mixer.music.load("ДИМОООН-ДИМОООН_(muzmo.su).mp3")
             pygame.mixer.music.play()
